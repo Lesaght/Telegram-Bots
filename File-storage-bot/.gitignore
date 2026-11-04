@@ -4,6 +4,7 @@
 __pycache__/
 *.py[cod]
 *.log
-saved_files/
+saved_files/*
+!saved_files/.gitkeep
 users_data.json
 shared_files.json
