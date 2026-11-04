@@ -42,7 +42,7 @@
 ```bash
 # Используя Git
 git clone https://github.com/Lesaght/uuu.git
-cd uuu
+cd Meme-bot
 ```
 
 Или скачайте ZIP архив прямо с GitHub и распакуйте его.
