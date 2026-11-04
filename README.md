@@ -1,28 +1,138 @@
-# Telegram Bots
+# 🤖 Telegram Bots Collection
 
-A monorepo containing independent Telegram bot projects. Each project lives in its own directory and keeps its own dependencies and setup instructions.
+<p align="center">
+  <strong>A collection of independent Telegram bot projects in one repository.</strong><br>
+  <strong>Коллекция независимых проектов Telegram-ботов в одном репозитории.</strong>
+</p>
 
-## Projects
+<p align="center">
+  <a href="#-projects--проекты">Projects</a> ·
+  <a href="#-getting-started">Getting started</a> ·
+  <a href="#-проекты">Русский</a> ·
+  <a href="#-запуск-проекта">Запуск</a>
+</p>
 
-| Directory | Description |
+---
+
+## 🇬🇧 English
+
+A home for seven Telegram bot projects, organized into separate directories for easier navigation, development, and maintenance. Each bot remains an independent project with its own code and dependencies.
+
+### ✨ Projects
+
+| Project | Description |
 |---|---|
-| [scanPDF-bot](scanPDF-bot/) | Turns photos into PDF scans with image processing |
-| [BOT-Weather](BOT-Weather/) | Weather information bot |
-| [Generate-password-bot](Generate-password-bot/) | Password generator bot |
-| [Reminder-Bot](Reminder-Bot/) | Reminder and scheduling bot |
-| [BotTranslator](BotTranslator/) | OCR, translation, speech-to-text and text-to-speech |
-| [botSteam](botSteam/) | Steam profiles, games, inventory and activity bot |
-| [Meme-Bot](Meme-Bot/) | Meme bot |
+| [📄 scanPDF-bot](scanPDF-bot/) | Turns images into PDF scans using image-processing tools. |
+| [🌦️ BOT-Weather](BOT-Weather/) | A Telegram bot for checking the weather. |
+| [🔐 Generate-password-bot](Generate-password-bot/) | Generates passwords. |
+| [⏰ Reminder-Bot](Reminder-Bot/) | Helps create reminders and manage scheduled notifications. |
+| [🌐 BotTranslator](BotTranslator/) | Translation toolkit with OCR, speech-to-text, and text-to-speech features. |
+| [🎮 botSteam](botSteam/) | Provides Steam-related information, including profiles, games, inventory, and activity. |
+| [😂 Meme-Bot](Meme-Bot/) | A bot for working with memes. |
 
-## Working with a project
+### 🚀 Getting started
 
-1. Open the project's directory.
-2. Read its README for project-specific setup.
-3. Install dependencies from that project's requirements or package file.
-4. Configure credentials locally; never commit tokens or secrets.
+1. **Choose a bot** from the project list and open its directory.
+2. **Read its README** (if provided) for project-specific instructions.
+3. **Set up its environment** and install the dependencies listed in that project's dependency files.
+4. **Configure credentials** such as Telegram bot tokens and API keys using local environment variables or a local `.env` file, as required by the project.
+5. **Run the bot** using the entry point and instructions documented in its directory.
 
-Projects are independent. This repository does not combine their runtime processes or dependency environments.
+> There is no single root-level installer or launcher: each bot is maintained and run independently.
 
-## Excluded local and generated files
+### 🧰 Repository layout
 
-Environment files, local databases, Python bytecode/cache directories, backup files, and machine-specific metadata are not included. Large binary speech-recognition model artifacts from BotTranslator/model/ are also not included; follow that project's model setup instructions to obtain them.
+```text
+Telegram-Bots/
+├── scanPDF-bot/
+├── BOT-Weather/
+├── Generate-password-bot/
+├── Reminder-Bot/
+├── BotTranslator/
+├── botSteam/
+├── Meme-Bot/
+├── .gitignore
+└── README.md
+```
+
+### 🔒 Security
+
+- Never commit Telegram tokens, API keys, passwords, or other secrets.
+- Keep local configuration files (such as `.env`) out of version control.
+- If a token or key is exposed, revoke it and generate a replacement.
+
+### 📝 Notes
+
+- The projects are grouped in one repository, but their codebases, dependencies, and runtime processes remain separate.
+- Local databases, caches, bytecode, backups, and machine-specific files are intentionally excluded.
+- Large binary speech-model artifacts for **BotTranslator** are not stored here. Follow that project's setup instructions to obtain the required models.
+
+### 🤝 Contributions
+
+Improvements, bug fixes, and documentation updates are welcome. When contributing, keep changes scoped to the relevant bot directory and include any setup or dependency changes.
+
+---
+
+## 🇷🇺 Русский
+
+Этот репозиторий объединяет семь Telegram-ботов, каждый из которых находится в отдельной папке. Такая структура упрощает навигацию и поддержку проектов, сохраняя их независимость: у каждого бота свой код, зависимости и инструкции по запуску.
+
+## ✨ Проекты
+
+| Проект | Описание |
+|---|---|
+| [📄 scanPDF-bot](scanPDF-bot/) | Преобразует изображения в PDF-сканы с помощью обработки изображений. |
+| [🌦️ BOT-Weather](BOT-Weather/) | Telegram-бот для получения информации о погоде. |
+| [🔐 Generate-password-bot](Generate-password-bot/) | Генерирует пароли. |
+| [⏰ Reminder-Bot](Reminder-Bot/) | Помогает создавать напоминания и управлять запланированными уведомлениями. |
+| [🌐 BotTranslator](BotTranslator/) | Инструменты перевода: OCR, распознавание речи и преобразование текста в речь. |
+| [🎮 botSteam](botSteam/) | Показывает информацию о Steam: профили, игры, инвентарь и активность. |
+| [😂 Meme-Bot](Meme-Bot/) | Бот для работы с мемами. |
+
+## 🚀 Запуск проекта
+
+1. **Выберите бота** из списка выше и откройте его папку.
+2. **Изучите README** внутри папки, если он есть: там могут быть инструкции именно для этого проекта.
+3. **Подготовьте окружение** и установите зависимости, указанные в файлах проекта.
+4. **Настройте доступы** — токены Telegram-ботов и API-ключи — через локальные переменные окружения или файл `.env`, если этого требует проект.
+5. **Запустите бота** согласно инструкциям и используемой точке входа в его папке.
+
+> Единого установщика или команды запуска для всего репозитория нет: каждый бот устанавливается и запускается отдельно.
+
+## 🧰 Структура репозитория
+
+```text
+Telegram-Bots/
+├── scanPDF-bot/
+├── BOT-Weather/
+├── Generate-password-bot/
+├── Reminder-Bot/
+├── BotTranslator/
+├── botSteam/
+├── Meme-Bot/
+├── .gitignore
+└── README.md
+```
+
+## 🔒 Безопасность
+
+- Не добавляйте в Git токены Telegram, API-ключи, пароли и другие секретные данные.
+- Не загружайте в репозиторий локальные файлы конфигурации, например `.env`.
+- Если токен или ключ стал публичным, отзовите его и создайте новый.
+
+## 📝 Примечания
+
+- Проекты собраны в одном репозитории, но их исходный код, зависимости и процессы запуска остаются независимыми.
+- Локальные базы данных, кэши, байткод, резервные копии и файлы, зависящие от конкретной машины, намеренно не включены.
+- Большие бинарные файлы речевых моделей **BotTranslator** не хранятся в этом репозитории. Для их получения следуйте инструкциям внутри проекта.
+
+## 🤝 Участие в разработке
+
+Буду рад улучшениям, исправлениям ошибок и обновлениям документации. По возможности ограничивайте изменения папкой соответствующего бота и не забывайте обновлять инструкции и зависимости, если они меняются.
+
+---
+
+<p align="center">
+  <sub>Made with ❤️ for Telegram bot experiments and projects.</sub><br>
+  <sub>Сделано с ❤️ для экспериментов и проектов с Telegram-ботами.</sub>
+</p>
