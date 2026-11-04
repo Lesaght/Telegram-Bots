@@ -51,7 +51,7 @@ except ImportError:
     # Задаем значения по умолчанию
     logger.warning("Не удалось импортировать config.py, используем значения по умолчанию.")
     BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-    SPECIAL_PASSWORD = os.environ.get("BOT_SPECIAL_PASSWORD", "Derzhavka")
+    SPECIAL_PASSWORD = os.environ.get("BOT_SPECIAL_PASSWORD", "")
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "bbhhggddqqzzxxccgg_bot")
     SAVE_FOLDER = "saved_files"
     USER_FILES_BASE_FOLDER = os.path.join(SAVE_FOLDER, "users")
